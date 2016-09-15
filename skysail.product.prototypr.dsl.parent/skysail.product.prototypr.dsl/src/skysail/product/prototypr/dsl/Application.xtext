@@ -1,0 +1,9 @@
+grammar skysail.product.prototypr.dsl.Application with org.eclipse.xtext.common.Terminals
+
+generate application "http://www.product.skysail/prototypr/dsl/Application"
+
+Model:
+	greetings+=Greeting*;
+	
+Greeting:
+	'Hello' name=ID '!';

@@ -1,0 +1,5 @@
+include 'skysail.product.prototypr.dsl'
+include 'skysail.product.prototypr.dsl.ide'
+include 'skysail.product.prototypr.dsl.idea'
+include 'skysail.product.prototypr.dsl.web'
+include 'skysail.product.prototypr.dsl.tests'

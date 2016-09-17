@@ -3,10 +3,10 @@
  */
 package skysail.product.prototypr.dsl.idea.completion;
 
-import org.eclipse.xtext.common.idea.completion.TerminalsCompletionContributor;
 import org.eclipse.xtext.idea.lang.AbstractXtextLanguage;
+import org.eclipse.xtext.xbase.idea.completion.XbaseCompletionContributor;
 
-public class AbstractApplicationCompletionContributor extends TerminalsCompletionContributor {
+public class AbstractApplicationCompletionContributor extends XbaseCompletionContributor {
 	public AbstractApplicationCompletionContributor(AbstractXtextLanguage lang) {
 		super(lang);
 	}

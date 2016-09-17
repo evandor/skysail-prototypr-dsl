@@ -10,23 +10,23 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import skysail.product.prototypr.dsl.application.AbstractElement;
 import skysail.product.prototypr.dsl.application.ApplicationPackage;
-import skysail.product.prototypr.dsl.application.Greeting;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Greeting</b></em>'.
+ * An implementation of the model object '<em><b>Abstract Element</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link skysail.product.prototypr.dsl.application.impl.GreetingImpl#getName <em>Name</em>}</li>
+ *   <li>{@link skysail.product.prototypr.dsl.application.impl.AbstractElementImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class GreetingImpl extends MinimalEObjectImpl.Container implements Greeting
+public class AbstractElementImpl extends MinimalEObjectImpl.Container implements AbstractElement
 {
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -53,7 +53,7 @@ public class GreetingImpl extends MinimalEObjectImpl.Container implements Greeti
    * <!-- end-user-doc -->
    * @generated
    */
-  protected GreetingImpl()
+  protected AbstractElementImpl()
   {
     super();
   }
@@ -66,7 +66,7 @@ public class GreetingImpl extends MinimalEObjectImpl.Container implements Greeti
   @Override
   protected EClass eStaticClass()
   {
-    return ApplicationPackage.Literals.GREETING;
+    return ApplicationPackage.Literals.ABSTRACT_ELEMENT;
   }
 
   /**
@@ -89,7 +89,7 @@ public class GreetingImpl extends MinimalEObjectImpl.Container implements Greeti
     String oldName = name;
     name = newName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ApplicationPackage.GREETING__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, ApplicationPackage.ABSTRACT_ELEMENT__NAME, oldName, name));
   }
 
   /**
@@ -102,7 +102,7 @@ public class GreetingImpl extends MinimalEObjectImpl.Container implements Greeti
   {
     switch (featureID)
     {
-      case ApplicationPackage.GREETING__NAME:
+      case ApplicationPackage.ABSTRACT_ELEMENT__NAME:
         return getName();
     }
     return super.eGet(featureID, resolve, coreType);
@@ -118,7 +118,7 @@ public class GreetingImpl extends MinimalEObjectImpl.Container implements Greeti
   {
     switch (featureID)
     {
-      case ApplicationPackage.GREETING__NAME:
+      case ApplicationPackage.ABSTRACT_ELEMENT__NAME:
         setName((String)newValue);
         return;
     }
@@ -135,7 +135,7 @@ public class GreetingImpl extends MinimalEObjectImpl.Container implements Greeti
   {
     switch (featureID)
     {
-      case ApplicationPackage.GREETING__NAME:
+      case ApplicationPackage.ABSTRACT_ELEMENT__NAME:
         setName(NAME_EDEFAULT);
         return;
     }
@@ -152,7 +152,7 @@ public class GreetingImpl extends MinimalEObjectImpl.Container implements Greeti
   {
     switch (featureID)
     {
-      case ApplicationPackage.GREETING__NAME:
+      case ApplicationPackage.ABSTRACT_ELEMENT__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
     }
     return super.eIsSet(featureID);
@@ -175,4 +175,4 @@ public class GreetingImpl extends MinimalEObjectImpl.Container implements Greeti
     return result.toString();
   }
 
-} //GreetingImpl
+} //AbstractElementImpl

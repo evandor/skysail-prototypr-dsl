@@ -1,9 +1,34 @@
-grammar skysail.product.prototypr.dsl.Application with org.eclipse.xtext.common.Terminals
+grammar skysail.product.prototypr.dsl.Application with
+                                      org.eclipse.xtext.xbase.Xbase
 
 generate application "http://www.product.skysail/prototypr/dsl/Application"
-
-Model:
-	greetings+=Greeting*;
-	
-Greeting:
-	'Hello' name=ID '!';
+ 
+Application:
+    importSection=XImportSection?
+    elements+=AbstractElement*;
+ 
+AbstractElement:
+    PackageDeclaration | Entity;
+ 
+PackageDeclaration:
+    'application' name=QualifiedName '{'
+        elements+=AbstractElement*
+    '}';
+ 
+Entity:
+    'entity' name=ValidID ('extends' superType=JvmTypeReference)? '{'
+        features+=Feature*
+    '}';
+ 
+Feature:
+    Property | Operation;
+ 
+Property:
+    name=ValidID ':' type=JvmTypeReference;
+ 
+Operation:
+    'op' name=ValidID 
+        '('(params+=FullJvmFormalParameter 
+        (',' params+=FullJvmFormalParameter)*)?')'
+        ':' type=JvmTypeReference 
+    body=XBlockExpression;

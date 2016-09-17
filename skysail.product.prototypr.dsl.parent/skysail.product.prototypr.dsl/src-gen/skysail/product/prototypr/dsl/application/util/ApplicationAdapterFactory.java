@@ -76,14 +76,39 @@ public class ApplicationAdapterFactory extends AdapterFactoryImpl
     new ApplicationSwitch<Adapter>()
     {
       @Override
-      public Adapter caseModel(Model object)
+      public Adapter caseApplication(Application object)
       {
-        return createModelAdapter();
+        return createApplicationAdapter();
       }
       @Override
-      public Adapter caseGreeting(Greeting object)
+      public Adapter caseAbstractElement(AbstractElement object)
       {
-        return createGreetingAdapter();
+        return createAbstractElementAdapter();
+      }
+      @Override
+      public Adapter casePackageDeclaration(PackageDeclaration object)
+      {
+        return createPackageDeclarationAdapter();
+      }
+      @Override
+      public Adapter caseEntity(Entity object)
+      {
+        return createEntityAdapter();
+      }
+      @Override
+      public Adapter caseFeature(Feature object)
+      {
+        return createFeatureAdapter();
+      }
+      @Override
+      public Adapter caseProperty(Property object)
+      {
+        return createPropertyAdapter();
+      }
+      @Override
+      public Adapter caseOperation(Operation object)
+      {
+        return createOperationAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -108,31 +133,106 @@ public class ApplicationAdapterFactory extends AdapterFactoryImpl
 
 
   /**
-   * Creates a new adapter for an object of class '{@link skysail.product.prototypr.dsl.application.Model <em>Model</em>}'.
+   * Creates a new adapter for an object of class '{@link skysail.product.prototypr.dsl.application.Application <em>Application</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see skysail.product.prototypr.dsl.application.Model
+   * @see skysail.product.prototypr.dsl.application.Application
    * @generated
    */
-  public Adapter createModelAdapter()
+  public Adapter createApplicationAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link skysail.product.prototypr.dsl.application.Greeting <em>Greeting</em>}'.
+   * Creates a new adapter for an object of class '{@link skysail.product.prototypr.dsl.application.AbstractElement <em>Abstract Element</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see skysail.product.prototypr.dsl.application.Greeting
+   * @see skysail.product.prototypr.dsl.application.AbstractElement
    * @generated
    */
-  public Adapter createGreetingAdapter()
+  public Adapter createAbstractElementAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link skysail.product.prototypr.dsl.application.PackageDeclaration <em>Package Declaration</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see skysail.product.prototypr.dsl.application.PackageDeclaration
+   * @generated
+   */
+  public Adapter createPackageDeclarationAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link skysail.product.prototypr.dsl.application.Entity <em>Entity</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see skysail.product.prototypr.dsl.application.Entity
+   * @generated
+   */
+  public Adapter createEntityAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link skysail.product.prototypr.dsl.application.Feature <em>Feature</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see skysail.product.prototypr.dsl.application.Feature
+   * @generated
+   */
+  public Adapter createFeatureAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link skysail.product.prototypr.dsl.application.Property <em>Property</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see skysail.product.prototypr.dsl.application.Property
+   * @generated
+   */
+  public Adapter createPropertyAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link skysail.product.prototypr.dsl.application.Operation <em>Operation</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see skysail.product.prototypr.dsl.application.Operation
+   * @generated
+   */
+  public Adapter createOperationAdapter()
   {
     return null;
   }

@@ -12,46 +12,44 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import skysail.product.prototypr.dsl.application.AbstractElement;
 import skysail.product.prototypr.dsl.application.ApplicationPackage;
-import skysail.product.prototypr.dsl.application.Greeting;
-import skysail.product.prototypr.dsl.application.Model;
+import skysail.product.prototypr.dsl.application.PackageDeclaration;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Model</b></em>'.
+ * An implementation of the model object '<em><b>Package Declaration</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link skysail.product.prototypr.dsl.application.impl.ModelImpl#getGreetings <em>Greetings</em>}</li>
+ *   <li>{@link skysail.product.prototypr.dsl.application.impl.PackageDeclarationImpl#getElements <em>Elements</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ModelImpl extends MinimalEObjectImpl.Container implements Model
+public class PackageDeclarationImpl extends AbstractElementImpl implements PackageDeclaration
 {
   /**
-   * The cached value of the '{@link #getGreetings() <em>Greetings</em>}' containment reference list.
+   * The cached value of the '{@link #getElements() <em>Elements</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getGreetings()
+   * @see #getElements()
    * @generated
    * @ordered
    */
-  protected EList<Greeting> greetings;
+  protected EList<AbstractElement> elements;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected ModelImpl()
+  protected PackageDeclarationImpl()
   {
     super();
   }
@@ -64,7 +62,7 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   @Override
   protected EClass eStaticClass()
   {
-    return ApplicationPackage.Literals.MODEL;
+    return ApplicationPackage.Literals.PACKAGE_DECLARATION;
   }
 
   /**
@@ -72,13 +70,13 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Greeting> getGreetings()
+  public EList<AbstractElement> getElements()
   {
-    if (greetings == null)
+    if (elements == null)
     {
-      greetings = new EObjectContainmentEList<Greeting>(Greeting.class, this, ApplicationPackage.MODEL__GREETINGS);
+      elements = new EObjectContainmentEList<AbstractElement>(AbstractElement.class, this, ApplicationPackage.PACKAGE_DECLARATION__ELEMENTS);
     }
-    return greetings;
+    return elements;
   }
 
   /**
@@ -91,8 +89,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case ApplicationPackage.MODEL__GREETINGS:
-        return ((InternalEList<?>)getGreetings()).basicRemove(otherEnd, msgs);
+      case ApplicationPackage.PACKAGE_DECLARATION__ELEMENTS:
+        return ((InternalEList<?>)getElements()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -107,8 +105,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case ApplicationPackage.MODEL__GREETINGS:
-        return getGreetings();
+      case ApplicationPackage.PACKAGE_DECLARATION__ELEMENTS:
+        return getElements();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -124,9 +122,9 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case ApplicationPackage.MODEL__GREETINGS:
-        getGreetings().clear();
-        getGreetings().addAll((Collection<? extends Greeting>)newValue);
+      case ApplicationPackage.PACKAGE_DECLARATION__ELEMENTS:
+        getElements().clear();
+        getElements().addAll((Collection<? extends AbstractElement>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -142,8 +140,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case ApplicationPackage.MODEL__GREETINGS:
-        getGreetings().clear();
+      case ApplicationPackage.PACKAGE_DECLARATION__ELEMENTS:
+        getElements().clear();
         return;
     }
     super.eUnset(featureID);
@@ -159,10 +157,10 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case ApplicationPackage.MODEL__GREETINGS:
-        return greetings != null && !greetings.isEmpty();
+      case ApplicationPackage.PACKAGE_DECLARATION__ELEMENTS:
+        return elements != null && !elements.isEmpty();
     }
     return super.eIsSet(featureID);
   }
 
-} //ModelImpl
+} //PackageDeclarationImpl

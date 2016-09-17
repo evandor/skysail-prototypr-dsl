@@ -65,8 +65,13 @@ public class ApplicationFactoryImpl extends EFactoryImpl implements ApplicationF
   {
     switch (eClass.getClassifierID())
     {
-      case ApplicationPackage.MODEL: return createModel();
-      case ApplicationPackage.GREETING: return createGreeting();
+      case ApplicationPackage.APPLICATION: return createApplication();
+      case ApplicationPackage.ABSTRACT_ELEMENT: return createAbstractElement();
+      case ApplicationPackage.PACKAGE_DECLARATION: return createPackageDeclaration();
+      case ApplicationPackage.ENTITY: return createEntity();
+      case ApplicationPackage.FEATURE: return createFeature();
+      case ApplicationPackage.PROPERTY: return createProperty();
+      case ApplicationPackage.OPERATION: return createOperation();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -77,10 +82,10 @@ public class ApplicationFactoryImpl extends EFactoryImpl implements ApplicationF
    * <!-- end-user-doc -->
    * @generated
    */
-  public Model createModel()
+  public Application createApplication()
   {
-    ModelImpl model = new ModelImpl();
-    return model;
+    ApplicationImpl application = new ApplicationImpl();
+    return application;
   }
 
   /**
@@ -88,10 +93,65 @@ public class ApplicationFactoryImpl extends EFactoryImpl implements ApplicationF
    * <!-- end-user-doc -->
    * @generated
    */
-  public Greeting createGreeting()
+  public AbstractElement createAbstractElement()
   {
-    GreetingImpl greeting = new GreetingImpl();
-    return greeting;
+    AbstractElementImpl abstractElement = new AbstractElementImpl();
+    return abstractElement;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public PackageDeclaration createPackageDeclaration()
+  {
+    PackageDeclarationImpl packageDeclaration = new PackageDeclarationImpl();
+    return packageDeclaration;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Entity createEntity()
+  {
+    EntityImpl entity = new EntityImpl();
+    return entity;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Feature createFeature()
+  {
+    FeatureImpl feature = new FeatureImpl();
+    return feature;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Property createProperty()
+  {
+    PropertyImpl property = new PropertyImpl();
+    return property;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Operation createOperation()
+  {
+    OperationImpl operation = new OperationImpl();
+    return operation;
   }
 
   /**

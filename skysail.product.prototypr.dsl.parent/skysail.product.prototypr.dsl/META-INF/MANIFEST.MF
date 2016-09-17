@@ -13,7 +13,9 @@ Require-Bundle: org.eclipse.xtext,
  org.antlr.runtime,
  org.eclipse.xtext.util,
  org.eclipse.xtend.lib,
- org.eclipse.emf.common
+ org.eclipse.emf.common,
+ org.eclipse.xtext.common.types,
+ org.objectweb.asm;bundle-version="[5.0.1,6.0.0)";resolution:=optional
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: skysail.product.prototypr.dsl.serializer,
  skysail.product.prototypr.dsl.parser.antlr,
@@ -25,5 +27,6 @@ Export-Package: skysail.product.prototypr.dsl.serializer,
  skysail.product.prototypr.dsl.scoping,
  skysail.product.prototypr.dsl.application.impl,
  skysail.product.prototypr.dsl.validation,
- skysail.product.prototypr.dsl.services
+ skysail.product.prototypr.dsl.services,
+ skysail.product.prototypr.dsl.jvmmodel
 Import-Package: org.apache.log4j

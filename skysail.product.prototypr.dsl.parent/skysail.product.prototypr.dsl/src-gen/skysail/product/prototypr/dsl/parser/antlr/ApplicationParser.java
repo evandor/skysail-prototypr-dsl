@@ -27,7 +27,7 @@ public class ApplicationParser extends AbstractAntlrParser {
 
 	@Override 
 	protected String getDefaultRuleName() {
-		return "Model";
+		return "Application";
 	}
 
 	public ApplicationGrammarAccess getGrammarAccess() {

@@ -3,6 +3,7 @@
  */
 package skysail.product.prototypr.dsl.idea.lang.psi;
 
+import com.intellij.psi.impl.PsiTreeChangeEventImpl;
 import com.intellij.psi.util.PsiModificationTracker;
 import org.eclipse.xtext.psi.BaseXtextCodeBlockModificationListener;
 import skysail.product.prototypr.dsl.idea.lang.ApplicationLanguage;
@@ -11,6 +12,9 @@ public class ApplicationCodeBlockModificationListener extends BaseXtextCodeBlock
 
 	public ApplicationCodeBlockModificationListener(PsiModificationTracker psiModificationTracker) {
 		super(ApplicationLanguage.INSTANCE, psiModificationTracker);
+	}
+	protected boolean hasJavaStructuralChanges(PsiTreeChangeEventImpl event) {
+		return true;
 	}
 
 }

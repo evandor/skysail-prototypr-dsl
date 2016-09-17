@@ -14,7 +14,7 @@ import org.eclipse.xtext.ide.editor.contentassist.IProposalConflictHelper;
 import org.eclipse.xtext.ide.editor.contentassist.antlr.AntlrProposalConflictHelper;
 import org.eclipse.xtext.ide.editor.contentassist.antlr.IContentAssistParser;
 import org.eclipse.xtext.ide.editor.contentassist.antlr.internal.Lexer;
-import org.eclipse.xtext.web.server.DefaultWebModule;
+import org.eclipse.xtext.xbase.web.DefaultXbaseWebModule;
 import skysail.product.prototypr.dsl.ide.contentassist.antlr.ApplicationParser;
 import skysail.product.prototypr.dsl.ide.contentassist.antlr.internal.InternalApplicationLexer;
 
@@ -22,7 +22,7 @@ import skysail.product.prototypr.dsl.ide.contentassist.antlr.internal.InternalAp
  * Manual modifications go to {@link ApplicationWebModule}.
  */
 @SuppressWarnings("all")
-public abstract class AbstractApplicationWebModule extends DefaultWebModule {
+public abstract class AbstractApplicationWebModule extends DefaultXbaseWebModule {
 
 	public AbstractApplicationWebModule(Provider<ExecutorService> executorServiceProvider) {
 		super(executorServiceProvider);

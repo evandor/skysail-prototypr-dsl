@@ -58,42 +58,51 @@ public interface ApplicationPackage extends EPackage
   ApplicationPackage eINSTANCE = skysail.product.prototypr.dsl.application.impl.ApplicationPackageImpl.init();
 
   /**
-   * The meta object id for the '{@link skysail.product.prototypr.dsl.application.impl.ModelImpl <em>Model</em>}' class.
+   * The meta object id for the '{@link skysail.product.prototypr.dsl.application.impl.ApplicationImpl <em>Application</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see skysail.product.prototypr.dsl.application.impl.ModelImpl
-   * @see skysail.product.prototypr.dsl.application.impl.ApplicationPackageImpl#getModel()
+   * @see skysail.product.prototypr.dsl.application.impl.ApplicationImpl
+   * @see skysail.product.prototypr.dsl.application.impl.ApplicationPackageImpl#getApplication()
    * @generated
    */
-  int MODEL = 0;
+  int APPLICATION = 0;
 
   /**
-   * The feature id for the '<em><b>Greetings</b></em>' containment reference list.
+   * The feature id for the '<em><b>Import Section</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MODEL__GREETINGS = 0;
+  int APPLICATION__IMPORT_SECTION = 0;
 
   /**
-   * The number of structural features of the '<em>Model</em>' class.
+   * The feature id for the '<em><b>Elements</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MODEL_FEATURE_COUNT = 1;
+  int APPLICATION__ELEMENTS = 1;
 
   /**
-   * The meta object id for the '{@link skysail.product.prototypr.dsl.application.impl.GreetingImpl <em>Greeting</em>}' class.
+   * The number of structural features of the '<em>Application</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see skysail.product.prototypr.dsl.application.impl.GreetingImpl
-   * @see skysail.product.prototypr.dsl.application.impl.ApplicationPackageImpl#getGreeting()
+   * @generated
+   * @ordered
+   */
+  int APPLICATION_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link skysail.product.prototypr.dsl.application.impl.AbstractElementImpl <em>Abstract Element</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see skysail.product.prototypr.dsl.application.impl.AbstractElementImpl
+   * @see skysail.product.prototypr.dsl.application.impl.ApplicationPackageImpl#getAbstractElement()
    * @generated
    */
-  int GREETING = 1;
+  int ABSTRACT_ELEMENT = 1;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -102,59 +111,409 @@ public interface ApplicationPackage extends EPackage
    * @generated
    * @ordered
    */
-  int GREETING__NAME = 0;
+  int ABSTRACT_ELEMENT__NAME = 0;
 
   /**
-   * The number of structural features of the '<em>Greeting</em>' class.
+   * The number of structural features of the '<em>Abstract Element</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int GREETING_FEATURE_COUNT = 1;
-
+  int ABSTRACT_ELEMENT_FEATURE_COUNT = 1;
 
   /**
-   * Returns the meta object for class '{@link skysail.product.prototypr.dsl.application.Model <em>Model</em>}'.
+   * The meta object id for the '{@link skysail.product.prototypr.dsl.application.impl.PackageDeclarationImpl <em>Package Declaration</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Model</em>'.
-   * @see skysail.product.prototypr.dsl.application.Model
+   * @see skysail.product.prototypr.dsl.application.impl.PackageDeclarationImpl
+   * @see skysail.product.prototypr.dsl.application.impl.ApplicationPackageImpl#getPackageDeclaration()
    * @generated
    */
-  EClass getModel();
+  int PACKAGE_DECLARATION = 2;
 
   /**
-   * Returns the meta object for the containment reference list '{@link skysail.product.prototypr.dsl.application.Model#getGreetings <em>Greetings</em>}'.
+   * The feature id for the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Greetings</em>'.
-   * @see skysail.product.prototypr.dsl.application.Model#getGreetings()
-   * @see #getModel()
    * @generated
+   * @ordered
    */
-  EReference getModel_Greetings();
+  int PACKAGE_DECLARATION__NAME = ABSTRACT_ELEMENT__NAME;
 
   /**
-   * Returns the meta object for class '{@link skysail.product.prototypr.dsl.application.Greeting <em>Greeting</em>}'.
+   * The feature id for the '<em><b>Elements</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Greeting</em>'.
-   * @see skysail.product.prototypr.dsl.application.Greeting
    * @generated
+   * @ordered
    */
-  EClass getGreeting();
+  int PACKAGE_DECLARATION__ELEMENTS = ABSTRACT_ELEMENT_FEATURE_COUNT + 0;
 
   /**
-   * Returns the meta object for the attribute '{@link skysail.product.prototypr.dsl.application.Greeting#getName <em>Name</em>}'.
+   * The number of structural features of the '<em>Package Declaration</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PACKAGE_DECLARATION_FEATURE_COUNT = ABSTRACT_ELEMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link skysail.product.prototypr.dsl.application.impl.EntityImpl <em>Entity</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see skysail.product.prototypr.dsl.application.impl.EntityImpl
+   * @see skysail.product.prototypr.dsl.application.impl.ApplicationPackageImpl#getEntity()
+   * @generated
+   */
+  int ENTITY = 3;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ENTITY__NAME = ABSTRACT_ELEMENT__NAME;
+
+  /**
+   * The feature id for the '<em><b>Super Type</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ENTITY__SUPER_TYPE = ABSTRACT_ELEMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Features</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ENTITY__FEATURES = ABSTRACT_ELEMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Entity</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ENTITY_FEATURE_COUNT = ABSTRACT_ELEMENT_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link skysail.product.prototypr.dsl.application.impl.FeatureImpl <em>Feature</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see skysail.product.prototypr.dsl.application.impl.FeatureImpl
+   * @see skysail.product.prototypr.dsl.application.impl.ApplicationPackageImpl#getFeature()
+   * @generated
+   */
+  int FEATURE = 4;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FEATURE__NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Type</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FEATURE__TYPE = 1;
+
+  /**
+   * The number of structural features of the '<em>Feature</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FEATURE_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link skysail.product.prototypr.dsl.application.impl.PropertyImpl <em>Property</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see skysail.product.prototypr.dsl.application.impl.PropertyImpl
+   * @see skysail.product.prototypr.dsl.application.impl.ApplicationPackageImpl#getProperty()
+   * @generated
+   */
+  int PROPERTY = 5;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROPERTY__NAME = FEATURE__NAME;
+
+  /**
+   * The feature id for the '<em><b>Type</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROPERTY__TYPE = FEATURE__TYPE;
+
+  /**
+   * The number of structural features of the '<em>Property</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROPERTY_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link skysail.product.prototypr.dsl.application.impl.OperationImpl <em>Operation</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see skysail.product.prototypr.dsl.application.impl.OperationImpl
+   * @see skysail.product.prototypr.dsl.application.impl.ApplicationPackageImpl#getOperation()
+   * @generated
+   */
+  int OPERATION = 6;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OPERATION__NAME = FEATURE__NAME;
+
+  /**
+   * The feature id for the '<em><b>Type</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OPERATION__TYPE = FEATURE__TYPE;
+
+  /**
+   * The feature id for the '<em><b>Params</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OPERATION__PARAMS = FEATURE_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Body</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OPERATION__BODY = FEATURE_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Operation</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OPERATION_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 2;
+
+
+  /**
+   * Returns the meta object for class '{@link skysail.product.prototypr.dsl.application.Application <em>Application</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Application</em>'.
+   * @see skysail.product.prototypr.dsl.application.Application
+   * @generated
+   */
+  EClass getApplication();
+
+  /**
+   * Returns the meta object for the containment reference '{@link skysail.product.prototypr.dsl.application.Application#getImportSection <em>Import Section</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Import Section</em>'.
+   * @see skysail.product.prototypr.dsl.application.Application#getImportSection()
+   * @see #getApplication()
+   * @generated
+   */
+  EReference getApplication_ImportSection();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link skysail.product.prototypr.dsl.application.Application#getElements <em>Elements</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Elements</em>'.
+   * @see skysail.product.prototypr.dsl.application.Application#getElements()
+   * @see #getApplication()
+   * @generated
+   */
+  EReference getApplication_Elements();
+
+  /**
+   * Returns the meta object for class '{@link skysail.product.prototypr.dsl.application.AbstractElement <em>Abstract Element</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Abstract Element</em>'.
+   * @see skysail.product.prototypr.dsl.application.AbstractElement
+   * @generated
+   */
+  EClass getAbstractElement();
+
+  /**
+   * Returns the meta object for the attribute '{@link skysail.product.prototypr.dsl.application.AbstractElement#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Name</em>'.
-   * @see skysail.product.prototypr.dsl.application.Greeting#getName()
-   * @see #getGreeting()
+   * @see skysail.product.prototypr.dsl.application.AbstractElement#getName()
+   * @see #getAbstractElement()
    * @generated
    */
-  EAttribute getGreeting_Name();
+  EAttribute getAbstractElement_Name();
+
+  /**
+   * Returns the meta object for class '{@link skysail.product.prototypr.dsl.application.PackageDeclaration <em>Package Declaration</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Package Declaration</em>'.
+   * @see skysail.product.prototypr.dsl.application.PackageDeclaration
+   * @generated
+   */
+  EClass getPackageDeclaration();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link skysail.product.prototypr.dsl.application.PackageDeclaration#getElements <em>Elements</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Elements</em>'.
+   * @see skysail.product.prototypr.dsl.application.PackageDeclaration#getElements()
+   * @see #getPackageDeclaration()
+   * @generated
+   */
+  EReference getPackageDeclaration_Elements();
+
+  /**
+   * Returns the meta object for class '{@link skysail.product.prototypr.dsl.application.Entity <em>Entity</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Entity</em>'.
+   * @see skysail.product.prototypr.dsl.application.Entity
+   * @generated
+   */
+  EClass getEntity();
+
+  /**
+   * Returns the meta object for the containment reference '{@link skysail.product.prototypr.dsl.application.Entity#getSuperType <em>Super Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Super Type</em>'.
+   * @see skysail.product.prototypr.dsl.application.Entity#getSuperType()
+   * @see #getEntity()
+   * @generated
+   */
+  EReference getEntity_SuperType();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link skysail.product.prototypr.dsl.application.Entity#getFeatures <em>Features</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Features</em>'.
+   * @see skysail.product.prototypr.dsl.application.Entity#getFeatures()
+   * @see #getEntity()
+   * @generated
+   */
+  EReference getEntity_Features();
+
+  /**
+   * Returns the meta object for class '{@link skysail.product.prototypr.dsl.application.Feature <em>Feature</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Feature</em>'.
+   * @see skysail.product.prototypr.dsl.application.Feature
+   * @generated
+   */
+  EClass getFeature();
+
+  /**
+   * Returns the meta object for the attribute '{@link skysail.product.prototypr.dsl.application.Feature#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see skysail.product.prototypr.dsl.application.Feature#getName()
+   * @see #getFeature()
+   * @generated
+   */
+  EAttribute getFeature_Name();
+
+  /**
+   * Returns the meta object for the containment reference '{@link skysail.product.prototypr.dsl.application.Feature#getType <em>Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Type</em>'.
+   * @see skysail.product.prototypr.dsl.application.Feature#getType()
+   * @see #getFeature()
+   * @generated
+   */
+  EReference getFeature_Type();
+
+  /**
+   * Returns the meta object for class '{@link skysail.product.prototypr.dsl.application.Property <em>Property</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Property</em>'.
+   * @see skysail.product.prototypr.dsl.application.Property
+   * @generated
+   */
+  EClass getProperty();
+
+  /**
+   * Returns the meta object for class '{@link skysail.product.prototypr.dsl.application.Operation <em>Operation</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Operation</em>'.
+   * @see skysail.product.prototypr.dsl.application.Operation
+   * @generated
+   */
+  EClass getOperation();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link skysail.product.prototypr.dsl.application.Operation#getParams <em>Params</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Params</em>'.
+   * @see skysail.product.prototypr.dsl.application.Operation#getParams()
+   * @see #getOperation()
+   * @generated
+   */
+  EReference getOperation_Params();
+
+  /**
+   * Returns the meta object for the containment reference '{@link skysail.product.prototypr.dsl.application.Operation#getBody <em>Body</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Body</em>'.
+   * @see skysail.product.prototypr.dsl.application.Operation#getBody()
+   * @see #getOperation()
+   * @generated
+   */
+  EReference getOperation_Body();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -180,32 +539,40 @@ public interface ApplicationPackage extends EPackage
   interface Literals
   {
     /**
-     * The meta object literal for the '{@link skysail.product.prototypr.dsl.application.impl.ModelImpl <em>Model</em>}' class.
+     * The meta object literal for the '{@link skysail.product.prototypr.dsl.application.impl.ApplicationImpl <em>Application</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see skysail.product.prototypr.dsl.application.impl.ModelImpl
-     * @see skysail.product.prototypr.dsl.application.impl.ApplicationPackageImpl#getModel()
+     * @see skysail.product.prototypr.dsl.application.impl.ApplicationImpl
+     * @see skysail.product.prototypr.dsl.application.impl.ApplicationPackageImpl#getApplication()
      * @generated
      */
-    EClass MODEL = eINSTANCE.getModel();
+    EClass APPLICATION = eINSTANCE.getApplication();
 
     /**
-     * The meta object literal for the '<em><b>Greetings</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Import Section</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference MODEL__GREETINGS = eINSTANCE.getModel_Greetings();
+    EReference APPLICATION__IMPORT_SECTION = eINSTANCE.getApplication_ImportSection();
 
     /**
-     * The meta object literal for the '{@link skysail.product.prototypr.dsl.application.impl.GreetingImpl <em>Greeting</em>}' class.
+     * The meta object literal for the '<em><b>Elements</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see skysail.product.prototypr.dsl.application.impl.GreetingImpl
-     * @see skysail.product.prototypr.dsl.application.impl.ApplicationPackageImpl#getGreeting()
      * @generated
      */
-    EClass GREETING = eINSTANCE.getGreeting();
+    EReference APPLICATION__ELEMENTS = eINSTANCE.getApplication_Elements();
+
+    /**
+     * The meta object literal for the '{@link skysail.product.prototypr.dsl.application.impl.AbstractElementImpl <em>Abstract Element</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see skysail.product.prototypr.dsl.application.impl.AbstractElementImpl
+     * @see skysail.product.prototypr.dsl.application.impl.ApplicationPackageImpl#getAbstractElement()
+     * @generated
+     */
+    EClass ABSTRACT_ELEMENT = eINSTANCE.getAbstractElement();
 
     /**
      * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -213,7 +580,113 @@ public interface ApplicationPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute GREETING__NAME = eINSTANCE.getGreeting_Name();
+    EAttribute ABSTRACT_ELEMENT__NAME = eINSTANCE.getAbstractElement_Name();
+
+    /**
+     * The meta object literal for the '{@link skysail.product.prototypr.dsl.application.impl.PackageDeclarationImpl <em>Package Declaration</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see skysail.product.prototypr.dsl.application.impl.PackageDeclarationImpl
+     * @see skysail.product.prototypr.dsl.application.impl.ApplicationPackageImpl#getPackageDeclaration()
+     * @generated
+     */
+    EClass PACKAGE_DECLARATION = eINSTANCE.getPackageDeclaration();
+
+    /**
+     * The meta object literal for the '<em><b>Elements</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PACKAGE_DECLARATION__ELEMENTS = eINSTANCE.getPackageDeclaration_Elements();
+
+    /**
+     * The meta object literal for the '{@link skysail.product.prototypr.dsl.application.impl.EntityImpl <em>Entity</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see skysail.product.prototypr.dsl.application.impl.EntityImpl
+     * @see skysail.product.prototypr.dsl.application.impl.ApplicationPackageImpl#getEntity()
+     * @generated
+     */
+    EClass ENTITY = eINSTANCE.getEntity();
+
+    /**
+     * The meta object literal for the '<em><b>Super Type</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ENTITY__SUPER_TYPE = eINSTANCE.getEntity_SuperType();
+
+    /**
+     * The meta object literal for the '<em><b>Features</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ENTITY__FEATURES = eINSTANCE.getEntity_Features();
+
+    /**
+     * The meta object literal for the '{@link skysail.product.prototypr.dsl.application.impl.FeatureImpl <em>Feature</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see skysail.product.prototypr.dsl.application.impl.FeatureImpl
+     * @see skysail.product.prototypr.dsl.application.impl.ApplicationPackageImpl#getFeature()
+     * @generated
+     */
+    EClass FEATURE = eINSTANCE.getFeature();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute FEATURE__NAME = eINSTANCE.getFeature_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Type</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference FEATURE__TYPE = eINSTANCE.getFeature_Type();
+
+    /**
+     * The meta object literal for the '{@link skysail.product.prototypr.dsl.application.impl.PropertyImpl <em>Property</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see skysail.product.prototypr.dsl.application.impl.PropertyImpl
+     * @see skysail.product.prototypr.dsl.application.impl.ApplicationPackageImpl#getProperty()
+     * @generated
+     */
+    EClass PROPERTY = eINSTANCE.getProperty();
+
+    /**
+     * The meta object literal for the '{@link skysail.product.prototypr.dsl.application.impl.OperationImpl <em>Operation</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see skysail.product.prototypr.dsl.application.impl.OperationImpl
+     * @see skysail.product.prototypr.dsl.application.impl.ApplicationPackageImpl#getOperation()
+     * @generated
+     */
+    EClass OPERATION = eINSTANCE.getOperation();
+
+    /**
+     * The meta object literal for the '<em><b>Params</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference OPERATION__PARAMS = eINSTANCE.getOperation_Params();
+
+    /**
+     * The meta object literal for the '<em><b>Body</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference OPERATION__BODY = eINSTANCE.getOperation_Body();
 
   }
 

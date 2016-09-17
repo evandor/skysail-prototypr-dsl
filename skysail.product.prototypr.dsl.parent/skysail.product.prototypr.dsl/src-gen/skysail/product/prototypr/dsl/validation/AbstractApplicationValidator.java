@@ -6,14 +6,17 @@ package skysail.product.prototypr.dsl.validation;
 import java.util.ArrayList;
 import java.util.List;
 import org.eclipse.emf.ecore.EPackage;
-import org.eclipse.xtext.validation.AbstractDeclarativeValidator;
+import org.eclipse.xtext.xbase.validation.XbaseValidator;
 
-public abstract class AbstractApplicationValidator extends AbstractDeclarativeValidator {
+public abstract class AbstractApplicationValidator extends XbaseValidator {
 	
 	@Override
 	protected List<EPackage> getEPackages() {
-		List<EPackage> result = new ArrayList<EPackage>();
+		List<EPackage> result = new ArrayList<EPackage>(super.getEPackages());
 		result.add(skysail.product.prototypr.dsl.application.ApplicationPackage.eINSTANCE);
+		result.add(EPackage.Registry.INSTANCE.getEPackage("http://www.eclipse.org/xtext/xbase/Xbase"));
+		result.add(EPackage.Registry.INSTANCE.getEPackage("http://www.eclipse.org/xtext/common/JavaVMTypes"));
+		result.add(EPackage.Registry.INSTANCE.getEPackage("http://www.eclipse.org/xtext/xbase/Xtype"));
 		return result;
 	}
 	

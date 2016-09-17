@@ -3,7 +3,7 @@
  */
 package skysail.product.prototypr.dsl.scoping;
 
-import org.eclipse.xtext.scoping.impl.DelegatingScopeProvider;
+import org.eclipse.xtext.xbase.scoping.batch.XbaseBatchScopeProvider;
 
-public abstract class AbstractApplicationScopeProvider extends DelegatingScopeProvider {
+public abstract class AbstractApplicationScopeProvider extends XbaseBatchScopeProvider {
 }

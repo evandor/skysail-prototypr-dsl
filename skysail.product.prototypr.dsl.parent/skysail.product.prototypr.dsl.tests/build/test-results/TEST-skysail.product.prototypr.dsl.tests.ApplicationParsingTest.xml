@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="skysail.product.prototypr.dsl.tests.ApplicationParsingTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2016-09-17T09:10:05" hostname="carstensmac.fritz.box" time="1.597">
+<testsuite name="skysail.product.prototypr.dsl.tests.ApplicationParsingTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2016-09-17T13:12:36" hostname="carstensmac.fritz.box" time="3.616">
   <properties/>
-  <testcase name="loadModel" classname="skysail.product.prototypr.dsl.tests.ApplicationParsingTest" time="1.597"/>
+  <testcase name="loadModel" classname="skysail.product.prototypr.dsl.tests.ApplicationParsingTest" time="3.616"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

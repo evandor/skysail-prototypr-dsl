@@ -9,3 +9,6 @@ Require-Bundle: skysail.product.prototypr.dsl,
  org.eclipse.xtext.ide,
  org.eclipse.xtext.xbase.ide
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: skysail.product.prototypr.dsl.ide.contentassist.antlr.internal,
+ skysail.product.prototypr.dsl.ide.contentassist.antlr
+

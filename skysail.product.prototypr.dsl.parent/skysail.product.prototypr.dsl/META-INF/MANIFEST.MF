@@ -7,5 +7,23 @@ Bundle-SymbolicName: skysail.product.prototypr.dsl; singleton:=true
 Bundle-ActivationPolicy: lazy
 Require-Bundle: org.eclipse.xtext,
  org.eclipse.xtext.xbase,
- org.eclipse.equinox.common;bundle-version="3.5.0"
+ org.eclipse.equinox.common;bundle-version="3.5.0",
+ org.eclipse.emf.ecore,
+ org.eclipse.xtext.xbase.lib,
+ org.antlr.runtime,
+ org.eclipse.xtext.util,
+ org.eclipse.xtend.lib,
+ org.eclipse.emf.common
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: skysail.product.prototypr.dsl.serializer,
+ skysail.product.prototypr.dsl.parser.antlr,
+ skysail.product.prototypr.dsl.application.util,
+ skysail.product.prototypr.dsl.parser.antlr.internal,
+ skysail.product.prototypr.dsl,
+ skysail.product.prototypr.dsl.generator,
+ skysail.product.prototypr.dsl.application,
+ skysail.product.prototypr.dsl.scoping,
+ skysail.product.prototypr.dsl.application.impl,
+ skysail.product.prototypr.dsl.validation,
+ skysail.product.prototypr.dsl.services
+Import-Package: org.apache.log4j

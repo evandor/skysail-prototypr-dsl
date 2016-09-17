@@ -1,0 +1,93 @@
+<idea-plugin version="2">
+	<extensions defaultExtensionNs="org.eclipse.xtext.idea">
+		<package
+			uri="http://www.product.skysail/prototypr/dsl/Application"
+			class="skysail.product.prototypr.dsl.application.ApplicationPackage"
+		/>
+		<resourceFactory 
+			type="sapp"
+			class="org.eclipse.xtext.resource.IResourceFactory"
+			factoryClass="skysail.product.prototypr.dsl.idea.ApplicationExtensionFactory"
+		/>
+		<resourceServiceProvider
+			uriExtension="sapp"
+			class="org.eclipse.xtext.idea.resource.IResourceIdeaServiceProvider"
+			factoryClass="skysail.product.prototypr.dsl.idea.ApplicationExtensionFactory"
+		/>
+
+		<lang.setup
+			language="skysail.product.prototypr.dsl.Application"
+			implementationClass="skysail.product.prototypr.dsl.idea.ApplicationIdeaSetup"
+		/>
+	</extensions>
+
+	<extensions defaultExtensionNs="com.intellij">
+		<psi.treeChangePreprocessor implementation="skysail.product.prototypr.dsl.idea.lang.psi.ApplicationCodeBlockModificationListener"/>
+
+		<fileTypeFactory implementation="skysail.product.prototypr.dsl.idea.lang.ApplicationFileTypeFactory"/>
+		<stubElementTypeHolder class="skysail.product.prototypr.dsl.idea.lang.ApplicationElementTypeProvider"/>
+		<lang.ast.factory 
+			language="skysail.product.prototypr.dsl.Application"
+			factoryClass="skysail.product.prototypr.dsl.idea.ApplicationExtensionFactory"
+			implementationClass="org.eclipse.xtext.idea.lang.BaseXtextASTFactory"
+		/>
+		<lang.parserDefinition 
+			language="skysail.product.prototypr.dsl.Application"
+			factoryClass="skysail.product.prototypr.dsl.idea.ApplicationExtensionFactory"
+			implementationClass="skysail.product.prototypr.dsl.idea.lang.parser.ApplicationParserDefinition"
+		/>
+		<lang.findUsagesProvider 
+			language="skysail.product.prototypr.dsl.Application"
+			factoryClass="skysail.product.prototypr.dsl.idea.ApplicationExtensionFactory"
+			implementationClass="org.eclipse.xtext.idea.findusages.BaseXtextFindUsageProvider"
+		/>
+		<lang.refactoringSupport 
+			language="skysail.product.prototypr.dsl.Application"
+			factoryClass="skysail.product.prototypr.dsl.idea.ApplicationExtensionFactory"
+			implementationClass="org.eclipse.xtext.idea.refactoring.BaseXtextRefactoringSupportProvider"
+		/>
+		<lang.namesValidator 
+			language="skysail.product.prototypr.dsl.Application"
+			factoryClass="skysail.product.prototypr.dsl.idea.ApplicationExtensionFactory"
+			implementationClass="com.intellij.lang.refactoring.NamesValidator"
+		/>
+		<lang.syntaxHighlighterFactory key="skysail.product.prototypr.dsl.Application" implementationClass="skysail.product.prototypr.dsl.idea.highlighting.ApplicationSyntaxHighlighterFactory" />
+		<lang.braceMatcher 
+			language="skysail.product.prototypr.dsl.Application"
+			factoryClass="skysail.product.prototypr.dsl.idea.ApplicationExtensionFactory"
+			implementationClass="com.intellij.lang.PairedBraceMatcher"
+		/>
+		<annotator 
+			language="skysail.product.prototypr.dsl.Application"
+			factoryClass="skysail.product.prototypr.dsl.idea.ApplicationExtensionFactory"
+			implementationClass="org.eclipse.xtext.idea.annotation.IssueAnnotator"
+		/>
+		<completion.contributor language="skysail.product.prototypr.dsl.Application" implementationClass="skysail.product.prototypr.dsl.idea.completion.ApplicationCompletionContributor"/>
+		<pom.declarationSearcher implementation="skysail.product.prototypr.dsl.idea.lang.pom.ApplicationPomDeclarationSearcher"/>
+
+		<lang.psiStructureViewFactory 
+			language="skysail.product.prototypr.dsl.Application"
+			factoryClass="skysail.product.prototypr.dsl.idea.ApplicationExtensionFactory"
+			implementationClass="com.intellij.lang.PsiStructureViewFactory"
+		/>
+		<facetType implementation="skysail.product.prototypr.dsl.idea.facet.ApplicationFacetType"/>
+		<lang.documentationProvider 
+			language="skysail.product.prototypr.dsl.Application"
+			factoryClass="skysail.product.prototypr.dsl.idea.ApplicationExtensionFactory"
+			implementationClass="org.eclipse.xtext.idea.documentation.IdeaDocumentationProvider"
+		/>
+		<colorSettingsPage implementation="skysail.product.prototypr.dsl.idea.highlighting.ApplicationColorSettingsPage"/>
+		<highlightVisitor implementation="skysail.product.prototypr.dsl.idea.highlighting.ApplicationSemanticHighlightVisitor"/>
+
+		<lang.formatter 
+			language="skysail.product.prototypr.dsl.Application"
+			factoryClass="skysail.product.prototypr.dsl.idea.ApplicationExtensionFactory"
+			implementationClass="com.intellij.formatting.FormattingModelBuilder"
+		/>
+		<lang.commenter 
+			language="skysail.product.prototypr.dsl.Application"
+			factoryClass="skysail.product.prototypr.dsl.idea.ApplicationExtensionFactory"
+			implementationClass="com.intellij.lang.CodeDocumentationAwareCommenter"
+		/>
+	</extensions>
+</idea-plugin>

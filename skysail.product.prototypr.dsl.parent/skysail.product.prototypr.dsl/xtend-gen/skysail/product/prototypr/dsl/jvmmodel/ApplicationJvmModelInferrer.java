@@ -50,60 +50,66 @@ public class ApplicationJvmModelInferrer extends AbstractModelInferrer {
   protected void _infer(final Entity element, final IJvmDeclaredTypeAcceptor acceptor, final boolean isPrelinkingPhase) {
     QualifiedName _fullyQualifiedName = this._iQualifiedNameProvider.getFullyQualifiedName(element);
     JvmGenericType _class = this._jvmTypesBuilder.toClass(element, _fullyQualifiedName);
-    final Procedure1<JvmGenericType> _function = (JvmGenericType it) -> {
-      String _documentation = this._jvmTypesBuilder.getDocumentation(element);
-      this._jvmTypesBuilder.setDocumentation(it, _documentation);
-      JvmTypeReference _superType = element.getSuperType();
-      boolean _notEquals = (!Objects.equal(_superType, null));
-      if (_notEquals) {
-        EList<JvmTypeReference> _superTypes = it.getSuperTypes();
-        JvmTypeReference _superType_1 = element.getSuperType();
-        JvmTypeReference _cloneWithProxies = this._jvmTypesBuilder.cloneWithProxies(_superType_1);
-        this._jvmTypesBuilder.<JvmTypeReference>operator_add(_superTypes, _cloneWithProxies);
-      }
-      EList<Feature> _features = element.getFeatures();
-      for (final Feature feature : _features) {
-        boolean _matched = false;
-        if (feature instanceof Property) {
-          _matched=true;
-          EList<JvmMember> _members = it.getMembers();
-          String _name = ((Property)feature).getName();
-          JvmTypeReference _type = ((Property)feature).getType();
-          JvmField _field = this._jvmTypesBuilder.toField(feature, _name, _type);
-          this._jvmTypesBuilder.<JvmField>operator_add(_members, _field);
-          EList<JvmMember> _members_1 = it.getMembers();
-          String _name_1 = ((Property)feature).getName();
-          JvmTypeReference _type_1 = ((Property)feature).getType();
-          JvmOperation _getter = this._jvmTypesBuilder.toGetter(feature, _name_1, _type_1);
-          this._jvmTypesBuilder.<JvmOperation>operator_add(_members_1, _getter);
-          EList<JvmMember> _members_2 = it.getMembers();
-          String _name_2 = ((Property)feature).getName();
-          JvmTypeReference _type_2 = ((Property)feature).getType();
-          JvmOperation _setter = this._jvmTypesBuilder.toSetter(feature, _name_2, _type_2);
-          this._jvmTypesBuilder.<JvmOperation>operator_add(_members_2, _setter);
+    final Procedure1<JvmGenericType> _function = new Procedure1<JvmGenericType>() {
+      @Override
+      public void apply(final JvmGenericType it) {
+        String _documentation = ApplicationJvmModelInferrer.this._jvmTypesBuilder.getDocumentation(element);
+        ApplicationJvmModelInferrer.this._jvmTypesBuilder.setDocumentation(it, _documentation);
+        JvmTypeReference _superType = element.getSuperType();
+        boolean _notEquals = (!Objects.equal(_superType, null));
+        if (_notEquals) {
+          EList<JvmTypeReference> _superTypes = it.getSuperTypes();
+          JvmTypeReference _superType_1 = element.getSuperType();
+          JvmTypeReference _cloneWithProxies = ApplicationJvmModelInferrer.this._jvmTypesBuilder.cloneWithProxies(_superType_1);
+          ApplicationJvmModelInferrer.this._jvmTypesBuilder.<JvmTypeReference>operator_add(_superTypes, _cloneWithProxies);
         }
-        if (!_matched) {
-          if (feature instanceof Operation) {
+        EList<Feature> _features = element.getFeatures();
+        for (final Feature feature : _features) {
+          boolean _matched = false;
+          if (feature instanceof Property) {
             _matched=true;
             EList<JvmMember> _members = it.getMembers();
-            String _name = ((Operation)feature).getName();
-            JvmTypeReference _type = ((Operation)feature).getType();
-            final Procedure1<JvmOperation> _function_1 = (JvmOperation it_1) -> {
-              String _documentation_1 = this._jvmTypesBuilder.getDocumentation(feature);
-              this._jvmTypesBuilder.setDocumentation(it_1, _documentation_1);
-              EList<JvmFormalParameter> _params = ((Operation)feature).getParams();
-              for (final JvmFormalParameter p : _params) {
-                EList<JvmFormalParameter> _parameters = it_1.getParameters();
-                String _name_1 = p.getName();
-                JvmTypeReference _parameterType = p.getParameterType();
-                JvmFormalParameter _parameter = this._jvmTypesBuilder.toParameter(p, _name_1, _parameterType);
-                this._jvmTypesBuilder.<JvmFormalParameter>operator_add(_parameters, _parameter);
-              }
-              XExpression _body = ((Operation)feature).getBody();
-              this._jvmTypesBuilder.setBody(it_1, _body);
-            };
-            JvmOperation _method = this._jvmTypesBuilder.toMethod(feature, _name, _type, _function_1);
-            this._jvmTypesBuilder.<JvmOperation>operator_add(_members, _method);
+            String _name = ((Property)feature).getName();
+            JvmTypeReference _type = ((Property)feature).getType();
+            JvmField _field = ApplicationJvmModelInferrer.this._jvmTypesBuilder.toField(feature, _name, _type);
+            ApplicationJvmModelInferrer.this._jvmTypesBuilder.<JvmField>operator_add(_members, _field);
+            EList<JvmMember> _members_1 = it.getMembers();
+            String _name_1 = ((Property)feature).getName();
+            JvmTypeReference _type_1 = ((Property)feature).getType();
+            JvmOperation _getter = ApplicationJvmModelInferrer.this._jvmTypesBuilder.toGetter(feature, _name_1, _type_1);
+            ApplicationJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_1, _getter);
+            EList<JvmMember> _members_2 = it.getMembers();
+            String _name_2 = ((Property)feature).getName();
+            JvmTypeReference _type_2 = ((Property)feature).getType();
+            JvmOperation _setter = ApplicationJvmModelInferrer.this._jvmTypesBuilder.toSetter(feature, _name_2, _type_2);
+            ApplicationJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_2, _setter);
+          }
+          if (!_matched) {
+            if (feature instanceof Operation) {
+              _matched=true;
+              EList<JvmMember> _members = it.getMembers();
+              String _name = ((Operation)feature).getName();
+              JvmTypeReference _type = ((Operation)feature).getType();
+              final Procedure1<JvmOperation> _function = new Procedure1<JvmOperation>() {
+                @Override
+                public void apply(final JvmOperation it) {
+                  String _documentation = ApplicationJvmModelInferrer.this._jvmTypesBuilder.getDocumentation(feature);
+                  ApplicationJvmModelInferrer.this._jvmTypesBuilder.setDocumentation(it, _documentation);
+                  EList<JvmFormalParameter> _params = ((Operation)feature).getParams();
+                  for (final JvmFormalParameter p : _params) {
+                    EList<JvmFormalParameter> _parameters = it.getParameters();
+                    String _name = p.getName();
+                    JvmTypeReference _parameterType = p.getParameterType();
+                    JvmFormalParameter _parameter = ApplicationJvmModelInferrer.this._jvmTypesBuilder.toParameter(p, _name, _parameterType);
+                    ApplicationJvmModelInferrer.this._jvmTypesBuilder.<JvmFormalParameter>operator_add(_parameters, _parameter);
+                  }
+                  XExpression _body = ((Operation)feature).getBody();
+                  ApplicationJvmModelInferrer.this._jvmTypesBuilder.setBody(it, _body);
+                }
+              };
+              JvmOperation _method = ApplicationJvmModelInferrer.this._jvmTypesBuilder.toMethod(feature, _name, _type, _function);
+              ApplicationJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members, _method);
+            }
           }
         }
       }
